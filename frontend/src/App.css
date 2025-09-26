@@ -594,7 +594,7 @@ body {
 }
 
 .reply-post {
-  border-left: 4px solid var(--sp-gray-medium);
+  border-left: 4px solid var(--sp-border);
   margin-left: 2rem;
 }
 
