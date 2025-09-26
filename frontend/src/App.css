@@ -380,7 +380,7 @@ body {
 }
 
 .tab.active {
-  background: var(--sp-white);
+  background: var(--sp-gray-light);
   border-bottom-color: var(--sp-red);
   color: var(--sp-red);
 }
