@@ -326,11 +326,12 @@ body {
 }
 
 .ideal-card {
-  background: var(--sp-white);
+  background: var(--sp-gray-light);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 20px var(--sp-shadow);
   border-top: 4px solid var(--sp-red);
+  border: 1px solid var(--sp-border);
   transition: transform 0.3s ease;
 }
 
