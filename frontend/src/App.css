@@ -399,9 +399,11 @@ body {
 .auth-form input {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid var(--sp-gray-medium);
+  border: 2px solid var(--sp-border);
   border-radius: 4px;
   font-size: 1rem;
+  background: var(--sp-gray-medium);
+  color: var(--sp-text-light);
 }
 
 .auth-form input:focus {
