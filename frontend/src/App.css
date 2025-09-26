@@ -372,10 +372,11 @@ body {
   flex: 1;
   padding: 1rem;
   border: none;
-  background: var(--sp-gray-light);
+  background: var(--sp-gray-medium);
   cursor: pointer;
   font-weight: 500;
   border-bottom: 3px solid transparent;
+  color: var(--sp-text-light);
 }
 
 .tab.active {
