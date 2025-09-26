@@ -393,7 +393,7 @@ body {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: var(--sp-black);
+  color: var(--sp-text-light);
 }
 
 .auth-form input {
