@@ -1,12 +1,15 @@
-/* São Paulo Theme - Black, White, Red colors */
+/* São Paulo Separatist Theme - Dark colors */
 :root {
-  --sp-black: #000000;
+  --sp-black: #0f0f0f;
   --sp-white: #ffffff;
-  --sp-red: #dc143c;
-  --sp-gray-light: #f5f5f5;
-  --sp-gray-medium: #cccccc;
-  --sp-gray-dark: #333333;
-  --sp-shadow: rgba(0, 0, 0, 0.1);
+  --sp-red: #8b0000;
+  --sp-gray-light: #2a2a2a;
+  --sp-gray-medium: #404040;
+  --sp-gray-dark: #1a1a1a;
+  --sp-gray-darker: #121212;
+  --sp-shadow: rgba(0, 0, 0, 0.3);
+  --sp-text-light: #e0e0e0;
+  --sp-border: #333333;
 }
 
 * {
