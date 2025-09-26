@@ -287,10 +287,11 @@ body {
 .timeline-item .content {
   flex: 1;
   padding: 2rem;
-  background: var(--sp-white);
+  background: var(--sp-gray-light);
   border-radius: 8px;
   box-shadow: 0 4px 20px var(--sp-shadow);
   margin: 0 2rem;
+  border: 1px solid var(--sp-border);
 }
 
 .timeline-item:nth-child(odd) .content {
