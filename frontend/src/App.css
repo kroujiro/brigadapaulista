@@ -36,10 +36,11 @@ body {
   background: linear-gradient(135deg, var(--sp-black) 0%, var(--sp-gray-dark) 100%);
   color: var(--sp-white);
   padding: 1rem 0;
-  box-shadow: 0 2px 10px var(--sp-shadow);
+  box-shadow: 0 4px 20px var(--sp-shadow);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 2px solid var(--sp-red);
 }
 
 .header-content {
