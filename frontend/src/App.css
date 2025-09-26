@@ -582,8 +582,8 @@ body {
 }
 
 .post {
-  background: var(--sp-white);
-  border: 1px solid var(--sp-gray-medium);
+  background: var(--sp-gray-light);
+  border: 1px solid var(--sp-border);
   border-radius: 8px;
   margin-bottom: 1rem;
   overflow: hidden;
