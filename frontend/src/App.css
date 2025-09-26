@@ -354,12 +354,13 @@ body {
 }
 
 .auth-container {
-  background: var(--sp-white);
+  background: var(--sp-gray-light);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 20px var(--sp-shadow);
   width: 100%;
   max-width: 400px;
+  border: 1px solid var(--sp-border);
 }
 
 .auth-tabs {
