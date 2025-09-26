@@ -20,8 +20,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--sp-white);
-  color: var(--sp-black);
+  background-color: var(--sp-gray-darker);
+  color: var(--sp-text-light);
   line-height: 1.6;
 }
 
