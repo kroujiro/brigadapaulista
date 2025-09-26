@@ -644,7 +644,7 @@ body {
   padding: 2rem;
   border-radius: 8px;
   margin-top: 2rem;
-  border: 2px solid var(--sp-gray-medium);
+  border: 2px solid var(--sp-border);
 }
 
 .reply-form h3 {
