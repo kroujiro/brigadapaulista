@@ -1,15 +1,15 @@
-/* São Paulo Separatist Theme - Dark colors */
+/* São Paulo Separatist Theme - Readable colors */
 :root {
-  --sp-black: #0f0f0f;
+  --sp-black: #000000;
   --sp-white: #ffffff;
-  --sp-red: #8b0000;
-  --sp-gray-light: #2a2a2a;
-  --sp-gray-medium: #404040;
-  --sp-gray-dark: #1a1a1a;
-  --sp-gray-darker: #121212;
-  --sp-shadow: rgba(0, 0, 0, 0.3);
-  --sp-text-light: #e0e0e0;
-  --sp-border: #333333;
+  --sp-red: #dc143c;
+  --sp-gray-light: #f8f9fa;
+  --sp-gray-medium: #dee2e6;
+  --sp-gray-dark: #495057;
+  --sp-gray-darker: #343a40;
+  --sp-shadow: rgba(0, 0, 0, 0.15);
+  --sp-text-light: #212529;
+  --sp-border: #ced4da;
 }
 
 * {
