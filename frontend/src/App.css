@@ -471,7 +471,7 @@ body {
   border-radius: 4px;
   font-size: 1rem;
   font-family: inherit;
-  background: var(--sp-gray-medium);
+  background: var(--sp-white);
   color: var(--sp-text-light);
 }
 
