@@ -413,7 +413,7 @@ body {
 .anonymous-note {
   margin-top: 2rem;
   padding: 1rem;
-  background: var(--sp-gray-medium);
+  background: var(--sp-gray-light);
   border-radius: 4px;
   border-left: 4px solid var(--sp-red);
   color: var(--sp-text-light);
