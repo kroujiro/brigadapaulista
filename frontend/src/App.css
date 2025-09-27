@@ -371,7 +371,7 @@ body {
   flex: 1;
   padding: 1rem;
   border: none;
-  background: var(--sp-gray-medium);
+  background: var(--sp-gray-light);
   cursor: pointer;
   font-weight: 500;
   border-bottom: 3px solid transparent;
