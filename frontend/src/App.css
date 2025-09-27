@@ -728,11 +728,11 @@ body {
 
 /* Additional Chan-style elements */
 .post:hover {
-  background-color: var(--sp-gray-medium);
+  background-color: #fafafa;
 }
 
 .thread-item:nth-child(odd) {
-  background-color: var(--sp-gray-medium);
+  background-color: #fafafa;
 }
 
 .author {
