@@ -286,7 +286,7 @@ body {
 .timeline-item .content {
   flex: 1;
   padding: 2rem;
-  background: var(--sp-gray-light);
+  background: var(--sp-white);
   border-radius: 8px;
   box-shadow: 0 4px 20px var(--sp-shadow);
   margin: 0 2rem;
