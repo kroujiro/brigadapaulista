@@ -500,7 +500,7 @@ body {
 }
 
 .thread-item {
-  background: var(--sp-gray-light);
+  background: var(--sp-white);
   border: 1px solid var(--sp-border);
   border-radius: 8px;
   padding: 1.5rem;
