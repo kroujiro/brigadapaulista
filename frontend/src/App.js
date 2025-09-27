@@ -80,8 +80,8 @@ const Header = () => {
       <div className="header-content">
         <Link to="/" className="logo-link">
           <img 
-            src="https://i.ibb.co/zS8f9vV/brigada-paulista-logo.png" 
-            alt="Brigada Paulista Logo" 
+            src="https://images.unsplash.com/photo-1579642026965-f9a0b8faba6a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxTJUMzJUEzbyUyMFBhdWxvJTIwZmxhZ3xlbnwwfHx8fDE3NTg5NzE5NzJ8MA&ixlib=rb-4.1.0&q=85" 
+            alt="Bandeira Separatista Paulista" 
             className="logo"
           />
           <h1 className="site-title">BRIGADA PAULISTA</h1>
