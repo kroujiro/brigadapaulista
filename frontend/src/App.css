@@ -619,7 +619,7 @@ body {
 
 .post-header .post-number {
   font-weight: bold;
-  color: var(--sp-text-light);
+  color: var(--sp-black);
   margin-left: auto;
 }
 
