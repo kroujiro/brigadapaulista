@@ -147,13 +147,12 @@ body {
 }
 
 .hero-section {
-  background: linear-gradient(135deg, var(--sp-red) 0%, var(--sp-black) 100%);
+  background: linear-gradient(135deg, var(--sp-red) 0%, #b91c3c 100%);
   color: var(--sp-white);
   padding: 4rem 2rem;
   text-align: center;
   margin-bottom: 3rem;
   border-radius: 8px;
-  border: 2px solid var(--sp-red);
   box-shadow: 0 8px 32px var(--sp-shadow);
 }
 
