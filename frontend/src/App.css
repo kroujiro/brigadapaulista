@@ -353,7 +353,7 @@ body {
 }
 
 .auth-container {
-  background: var(--sp-gray-light);
+  background: var(--sp-white);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 20px var(--sp-shadow);
