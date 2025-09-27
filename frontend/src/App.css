@@ -33,7 +33,7 @@ body {
 
 /* Header Styles */
 .header {
-  background: linear-gradient(135deg, var(--sp-black) 0%, var(--sp-gray-dark) 100%);
+  background: linear-gradient(135deg, var(--sp-black) 0%, var(--sp-gray-darker) 100%);
   color: var(--sp-white);
   padding: 1rem 0;
   box-shadow: 0 4px 20px var(--sp-shadow);
