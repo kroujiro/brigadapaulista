@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigada Paulista - Por São Paulo Livre e Independente!</title>
+    <style>
+        /* São Paulo Separatist Theme - Readable colors */
+        :root {
+            --sp-black: #000000;
+            --sp-white: #ffffff;
+            --sp-red: #dc143c;
+            --sp-gray-light: #f8f9fa;
+            --sp-gray-medium: #dee2e6;
+            --sp-gray-dark: #495057;
+            --sp-gray-darker: #343a40;
+            --sp-shadow: rgba(0, 0, 0, 0.15);
+            --sp-text-light: #212529;
+            --sp-border: #ced4da;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--sp-white);
+            color: var(--sp-text-light);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--sp-black) 0%, var(--sp-gray-darker) 100%);
+            color: var(--sp-white);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px var(--sp-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--sp-red);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--sp-white);
+        }
+
+        .logo {
+            height: 50px;
+            margin-right: 1rem;
+            border: 2px solid var(--sp-white);
+            border-radius: 4px;
+        }
+
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--sp-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-link:hover {
+            color: var(--sp-red);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .telegram-link {
+            background-color: var(--sp-red);
+            color: var(--sp-white) !important;
+        }
+
+        .telegram-link:hover {
+            background-color: #b91c3c;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--sp-red) 0%, #b91c3c 100%);
+            color: var(--sp-white);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px var(--sp-shadow);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--sp-white);
+            color: var(--sp-red);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--sp-gray-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--sp-white);
+            border: 2px solid var(--sp-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--sp-white);
+            color: var(--sp-red);
+        }
+
+        /* History Section */
+        .history-section {
+            margin-bottom: 4rem;
+        }
+
+        .history-section h3 {
+            font-size: 2.5rem;
+            color: var(--sp-black);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .history-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--sp-black), var(--sp-red));
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item .year {
+            background: var(--sp-red);
+            color: var(--sp-white);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 10;
+            border: 4px solid var(--sp-white);
+            box-shadow: 0 4px 15px var(--sp-shadow);
+        }
+
+        .timeline-item.current .year {
+            background: var(--sp-black);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 15px var(--sp-shadow); }
+            50% { box-shadow: 0 4px 25px rgba(220, 20, 60, 0.4); }
+            100% { box-shadow: 0 4px 15px var(--sp-shadow); }
+        }
+
+        .timeline-item .content {
+            flex: 1;
+            padding: 2rem;
+            background: var(--sp-white);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px var(--sp-shadow);
+            margin: 0 2rem;
+            border: 1px solid var(--sp-border);
+        }
+
+        .timeline-item:nth-child(odd) .content {
+            margin-left: 2rem;
+            margin-right: 0;
+        }
+
+        .timeline-item:nth-child(even) .content {
+            margin-right: 2rem;
+            margin-left: 0;
+        }
+
+        .timeline-item h4 {
+            color: var(--sp-red);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Manifesto Section */
+        .manifesto-section h3 {
+            font-size: 2.5rem;
+            color: var(--sp-black);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .ideals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ideal-card {
+            background: var(--sp-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px var(--sp-shadow);
+            border-top: 4px solid var(--sp-red);
+            border: 1px solid var(--sp-border);
+            transition: transform 0.3s ease;
+        }
+
+        .ideal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ideal-card h4 {
+            color: var(--sp-red);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Forum Section */
+        .forum-section {
+            background: var(--sp-gray-light);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            border: 1px solid var(--sp-border);
+        }
+
+        .forum-section h3 {
+            font-size: 2rem;
+            color: var(--sp-black);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .forum-description {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--sp-gray-dark);
+        }
+
+        .forum-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .forum-feature {
+            background: var(--sp-white);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--sp-red);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .forum-feature h4 {
+            color: var(--sp-red);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+            }
+
+            .timeline-item .content {
+                margin: 1rem 0 0 0 !important;
+            }
+
+            .history-timeline::before {
+                display: none;
+            }
+
+            .ideals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo-link">
+                <!-- SUBSTITUA ESTA URL PELA SUA LOGO -->
+                <img src="[SUBSTITUA_PELA_URL_DA_SUA_LOGO]" alt="Brigada Paulista Logo" class="logo">
+                <h1 class="site-title">BRIGADA PAULISTA</h1>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#forum" class="nav-link">Fórum</a>
+                <a href="https://t.me/brigadapaulista" target="_blank" rel="noopener noreferrer" class="nav-link telegram-link">
+                    📱 Telegram
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="inicio">
+            <div class="hero-content">
+                <h2 class="hero-title">Por São Paulo Livre e Independente!</h2>
+                <p class="hero-subtitle">
+                    A Brigada Paulista é o movimento sucessor legítimo dos grandes movimentos separatistas paulistas do passado.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#forum" class="btn btn-primary">Acesse o Fórum</a>
+                    <a href="https://t.me/brigadapaulista" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        Junte-se no Telegram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>Nossa História</h3>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="year">1887</div>
+                    <div class="content">
+                        <h4>Separatismo Paulista de 1887</h4>
+                        <p>
+                            O primeiro grande movimento separatista paulista surge no final do Império, 
+                            liderado pelas elites cafeicultoras e setores republicanos, descontentes com 
+                            a centralização imperial e as mudanças nas políticas escravistas.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="year">1932</div>
+                    <div class="content">
+                        <h4>Revolução Constitucionalista de 1932</h4>
+                        <p>
+                            O maior levante paulista da história! São Paulo se ergue contra a ditadura 
+                            de Getúlio Vargas, mobilizando toda a população em defesa da autonomia paulista 
+                            e da democracia constitucional. A data de 9 de julho marca para sempre 
+                            o espírito de resistência paulista.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item current">
+                    <div class="year">2025</div>
+                    <div class="content">
+                        <h4>Brigada Paulista - O Renascimento</h4>
+                        <p>
+                            A Brigada Paulista surge como o movimento sucessor legítimo desses 
+                            grandes levantes do passado. Defendemos a independência total de São Paulo, 
+                            nossa autonomia econômica e o direito do povo paulista à autodeterminação.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manifesto Section -->
+        <section class="manifesto-section">
+            <h3>Nossos Ideais</h3>
+            <div class="ideals-grid">
+                <div class="ideal-card">
+                    <h4>🏛️ Autonomia Política</h4>
+                    <p>São Paulo livre para tomar suas próprias decisões políticas e administrativas.</p>
+                </div>
+                <div class="ideal-card">
+                    <h4>💰 Independência Econômica</h4>
+                    <p>Nossos recursos e riquezas devem servir primeiro ao povo paulista.</p>
+                </div>
+                <div class="ideal-card">
+                    <h4>🎯 Autodeterminação</h4>
+                    <p>O direito fundamental do povo paulista de decidir seu próprio destino.</p>
+                </div>
+                <div class="ideal-card">
+                    <h4>🚀 Progresso e Desenvolvimento</h4>
+                    <p>São Paulo como uma nação próspera e desenvolvida, livre de amarras federais.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forum Section -->
+        <section class="forum-section" id="forum">
+            <h3>Fórum da Brigada Paulista</h3>
+            <p class="forum-description">
+                Participe das discussões sobre a independência paulista. Sistema híbrido: poste anonimamente ou crie sua conta.
+            </p>
+            
+            <div class="forum-features">
+                <div class="forum-feature">
+                    <h4>💬 Discussões Livres</h4>
+                    <p>Debata ideias sobre a independência paulista em um ambiente aberto e democrático.</p>
+                </div>
+                <div class="forum-feature">
+                    <h4>👤 Postagem Anônima</h4>
+                    <p>Participe sem revelar sua identidade - sistema estilo chan para máxima liberdade.</p>
+                </div>
+                <div class="forum-feature">
+                    <h4>📸 Suporte a Imagens</h4>
+                    <p>Compartilhe fotos, memes e conteúdo visual para enriquecer as discussões.</p>
+                </div>
+                <div class="forum-feature">
+                    <h4>🔐 Contas Opcionais</h4>
+                    <p>Crie uma conta para construir reputação ou continue postando anonimamente.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://movimento-paulista.preview.emergentagent.com/forum" class="btn btn-primary">
+                    Acessar Fórum Completo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--sp-gray-darker); color: var(--sp-white); text-align: center; padding: 2rem; margin-top: 4rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h3 style="margin-bottom: 1rem;">BRIGADA PAULISTA</h3>
+            <p style="margin-bottom: 1rem;">Por São Paulo Livre e Independente!</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="https://t.me/brigadapaulista" target="_blank" rel="noopener noreferrer" 
+                   style="color: var(--sp-white); text-decoration: none; padding: 0.5rem 1rem; background: var(--sp-red); border-radius: 4px;">
+                    📱 Telegram
+                </a>
+                <a href="https://movimento-paulista.preview.emergentagent.com/forum" 
+                   style="color: var(--sp-white); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--sp-white); border-radius: 4px;">
+                    💬 Fórum
+                </a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                © 2025 Brigada Paulista - Movimento pela Independência de São Paulo
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add some interactivity to cards
+        document.querySelectorAll('.ideal-card, .forum-feature').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0px)';
+            });
+        });
+    </script>
+</body>
+</html>
